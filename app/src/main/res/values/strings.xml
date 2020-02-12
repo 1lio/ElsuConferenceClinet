@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">ЕГУ: Конференции</string>
+    <string name="events">События</string>
+    <string name="members">Участники</string>
+    <string name="add_event">Создать событие</string>
+    <string name="name_event">Название конференции</string>
+    <string name="status">Статус</string>
+    <string name="description">Описание</string>
+    <string name="name_p">Название площадки</string>
+    <string name="pl">Площадка</string>
+    <string name="plus">+</string>
+    <string name="time_start">Время начала</string>
+    <string name="date_start">Дата начала:</string>
+    <string name="icon">icon</string>
+</resources>
