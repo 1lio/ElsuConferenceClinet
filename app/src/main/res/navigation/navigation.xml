@@ -7,9 +7,13 @@
 
     <fragment
         android:id="@+id/events"
-        android:name="ru.elsu.conference.ui.events.EventsFragment"
+        android:name="ru.elsu.conference.ui.events.EventListFragment"
         android:label="EventsFragment"
-        tools:layout="@layout/fr_events" />
+        tools:layout="@layout/fr_events" >
+        <action
+            android:id="@+id/action_events_to_eventFragment"
+            app:destination="@id/eventFragment" />
+    </fragment>
     <fragment
         android:id="@+id/members"
         android:name="ru.elsu.conference.ui.members.MembersFragment"
@@ -20,4 +24,9 @@
         android:name="ru.elsu.conference.ui.statistics.StatisticsFragment"
         android:label="StatisticsFragment"
         tools:layout="@layout/fr_statistics" />
+    <fragment
+        android:id="@+id/eventFragment"
+        tools:layout="@layout/fr_event_full"
+        android:name="ru.elsu.conference.ui.events.EventFragment"
+        android:label="EventFragment" />
 </navigation>

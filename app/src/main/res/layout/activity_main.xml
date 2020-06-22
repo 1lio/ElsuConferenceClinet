@@ -17,15 +17,30 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/coordinatorLayout"
         app:layout_constraintTop_toTopOf="@+id/coordinatorLayout"
-        app:navGraph="@navigation/navigation" />
+        app:navGraph="@navigation/navigation"
+        tools:ignore="FragmentTagUsage" />
+
+    <FrameLayout
+        android:layout_width="264dp"
+        android:layout_height="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <include layout="@layout/search"/>
+
+    </FrameLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
 
         <com.google.android.material.bottomappbar.BottomAppBar
-            android:id="@+id/appBar"
+            android:id="@+id/bottomAppBar"
             style="@style/BottomNavStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -40,7 +55,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/add_event"
-            app:layout_anchor="@id/appBar"
+            app:layout_anchor="@id/bottomAppBar"
             app:srcCompat="@drawable/ic_add_black_24dp"
             app:tint="@color/white" />
 

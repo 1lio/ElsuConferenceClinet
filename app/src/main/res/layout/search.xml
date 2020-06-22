@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="46dp"
+    android:background="@drawable/bg_search"
+    android:orientation="horizontal">
+
+    <EditText
+        android:inputType="textNoSuggestions"
+        android:id="@+id/txtLocation"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start|center"
+        android:layout_marginStart="36dp"
+        android:paddingStart="16dp"
+        android:layout_marginEnd="48dp"
+        android:background="#00000000"
+        android:gravity="center|start"
+        android:hint="@string/search"
+        android:textColor="@color/white"
+        android:textColorHint="@color/grayLight"
+        android:textSize="12sp"
+        tools:ignore="RtlSymmetry" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_gravity="end|center"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="16dp"
+        app:srcCompat="@drawable/ic_baseline_sort_24" />
+
+</FrameLayout>

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">ЕГУ: Конференции</string>
-    <string name="events">События</string>
+    <string name="events">СОБЫТИЯ</string>
     <string name="members">Участники</string>
     <string name="add_event">Создать событие</string>
     <string name="name_event">Название конференции</string>
@@ -14,4 +14,28 @@
     <string name="icon">icon</string>
     <string name="add_member">add_member</string>
     <string name="statistics">Статистика</string>
+    <string name="save_event">Событие сохранено!</string>
+    <string name="started">Идет</string>
+    <string name="search">Поиск</string>
+    <string name="planned">Запланированно</string>
+    <string name="replaced">Перенесено</string>
+    <string name="canceled">Отменено</string>
+    <string name="finished">Завершено</string>
+
+    <string-array name="events">
+        <item>Идет</item>
+        <item>Поиск</item>
+        <item>Запланированно</item>
+        <item>Отменено</item>
+        <item>Завершено</item>
+    </string-array>
+
+    <string-array name="platforms">
+        <item>Mind</item>
+        <item>Skype</item>
+        <item>Zoom</item>
+        <item>Jit.Si</item>
+        <item>Hangouts</item>
+        <item>Ya.Telemost</item>
+    </string-array>
 </resources>

@@ -7,10 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.elsu.conference.R
 
-class EventsFragment : Fragment() {
+class EventFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
         super.onCreateView(inflater, group, state)
-        return inflater.inflate(R.layout.fr_events, group, false)
+        return inflater.inflate(R.layout.fr_event_full, group, false)
     }
+
+
 }
