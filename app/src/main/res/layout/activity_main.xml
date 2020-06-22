@@ -6,34 +6,31 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <FrameLayout
-        android:id="@+id/container"
+    <fragment
+        android:id="@+id/hostFragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginBottom="56dp"
-        app:layout_constraintBottom_toBottomOf="@+id/bottom_view"
+        app:defaultNavHost="true"
+        app:layout_constraintBottom_toBottomOf="@+id/coordinatorLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/bottom_view"
-        app:layout_constraintTop_toTopOf="@+id/bottom_view">
-
-
-        <include
-            layout="@layout/fr_events"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent" />
-    </FrameLayout>
+        app:layout_constraintStart_toStartOf="@+id/coordinatorLayout"
+        app:layout_constraintTop_toTopOf="@+id/coordinatorLayout"
+        app:navGraph="@navigation/navigation" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/bottom_view"
+        android:id="@+id/coordinatorLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ru.elsu.conference.view.BottomView
-            android:id="@+id/bottom_bar"
-            style="@style/Widget.MaterialComponents.BottomAppBar"
+        <com.google.android.material.bottomappbar.BottomAppBar
+            android:id="@+id/appBar"
+            style="@style/BottomNavStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
+            app:fabAlignmentMode="end"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -43,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:contentDescription="@string/add_event"
-            app:layout_anchor="@id/bottom_bar"
+            app:layout_anchor="@id/appBar"
             app:srcCompat="@drawable/ic_add_black_24dp"
             app:tint="@color/white" />
 
