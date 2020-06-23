@@ -9,13 +9,17 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
+import kotlinx.android.synthetic.main.fr_members.*
 import ru.elsu.conference.R
 import ru.elsu.conference.extensions.setDrawable
+import ru.elsu.conference.repository.Repository
 
-class MembersFragment : Fragment() {
+class MemberListFragment : Fragment() {
 
     private lateinit var navigation: NavController
     private lateinit var fab: FloatingActionButton
+    private lateinit var adapter: MembersListAdapter
+
     private var isCheckedFab = false
 
     override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
@@ -24,6 +28,9 @@ class MembersFragment : Fragment() {
         navigation = requireActivity().findNavController(R.id.hostFragment)
         fab = requireActivity().findViewById(R.id.fab)
         fab.show()
+
+        val list = Repository.getInstance().getMembers()
+        adapter = MembersListAdapter(list)
 
         val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.GONE
@@ -34,6 +41,8 @@ class MembersFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        memberRecycler.adapter = adapter
 
         fab.setOnClickListener {
 

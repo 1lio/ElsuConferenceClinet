@@ -23,20 +23,18 @@ class EventListFragment : Fragment() {
 
     private var isCheckedFab = false
 
+
+
     override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
         super.onCreateView(inflater, group, state)
 
         val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.VISIBLE
-        sort.setOnClickListener {
-            alertCategory()
-        }
-
+        sort.setOnClickListener { alertCategory() }
 
         navigation = requireActivity().findNavController(R.id.hostFragment)
         fab = requireActivity().findViewById(R.id.fab)
         fab.show()
-
 
         return inflater.inflate(R.layout.fr_events, group, false)
     }
@@ -53,6 +51,7 @@ class EventListFragment : Fragment() {
                 navigation.navigate(R.id.action_events_to_eventFragment)
                 fab.setDrawable(R.drawable.ic_baseline_save_24)
                 true
+
             } else {
                 // При повторном нажатии сохраняем событие и возвращаемся назад
                 saveEvent()
@@ -60,8 +59,8 @@ class EventListFragment : Fragment() {
                 fab.setDrawable(R.drawable.ic_add) // Меняем иконку обратно
                 false
             }
-
         }
+
 
 
     }

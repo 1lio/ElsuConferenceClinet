@@ -5,35 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/icon"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iconMember"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        tools:srcCompat="@drawable/egu_logo"
-        tools:ignore="ContentDescription" />
+        app:layout_constraintVertical_bias="0.100000024"
+        tools:ignore="ContentDescription"
+        tools:srcCompat="@drawable/ic_member" />
 
     <TextView
-        android:id="@+id/email"
+        android:id="@+id/emailMember"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginBottom="8dp"
-        android:textSize="12sp"
         android:textColor="@color/grayLight"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/div1"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name"
+        app:layout_constraintStart_toStartOf="@+id/titleMember"
+        app:layout_constraintTop_toBottomOf="@+id/titleMember"
         tools:text="main@elsu.ru" />
 
     <TextView
-        android:id="@+id/name"
+        android:id="@+id/titleMember"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -43,7 +43,7 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon"
+        app:layout_constraintStart_toEndOf="@+id/iconMember"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         tools:text="Федеральное государственное бюджетное образовательное учреждение высшего образования «Елецкий государственный университет им. И.А. Бунина»" />
@@ -55,6 +55,6 @@
         android:background="?android:attr/listDivider"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/name" />
+        app:layout_constraintStart_toStartOf="@+id/titleMember" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
