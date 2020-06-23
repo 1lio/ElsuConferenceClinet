@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/members"
-        android:name="ru.elsu.conference.ui.members.MembersFragment"
+        android:name="ru.elsu.conference.ui.members.MemberListFragment"
         android:label="MembersFragment"
         tools:layout="@layout/fr_members">
         <action
