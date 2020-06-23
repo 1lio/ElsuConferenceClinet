@@ -22,10 +22,15 @@
     <string name="canceled">Отменено</string>
     <string name="finished">Завершено</string>
 
+    <string name="categories">Категории</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Отмена</string>
+
+
     <string-array name="events">
         <item>Идет</item>
-        <item>Поиск</item>
         <item>Запланированно</item>
+        <item>Перенесено</item>
         <item>Отменено</item>
         <item>Завершено</item>
     </string-array>

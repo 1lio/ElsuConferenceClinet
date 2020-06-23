@@ -50,9 +50,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setFabState() {
+
         // Перхожим на создание "События" и меняем вид FAB
         isCheckedFab = if (!isCheckedFab) {
-            navController.navigate(R.id.eventFragment)
+            navController.navigate(R.id.action_events_to_eventFragment)
             fab.setDrawable(R.drawable.ic_baseline_save_24)
             true
         } else {
@@ -62,6 +63,7 @@ class MainActivity : AppCompatActivity() {
             fab.setDrawable(R.drawable.ic_add_black_24dp) // Меняем иконку обратно
             false
         }
+
     }
 
     private fun saveEvent() {
