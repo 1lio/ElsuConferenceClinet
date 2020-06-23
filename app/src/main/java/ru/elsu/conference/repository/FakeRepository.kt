@@ -3,16 +3,40 @@ package ru.elsu.conference.repository
 import ru.elsu.conference.api.model.Event
 import ru.elsu.conference.api.model.Member
 
+// Для ручного тестирования
+
 class FakeRepository {
 
-    private val memberElsu = Member(
+    private val memberEGU = Member(
         id = "elsu123",
-        icon = "elsu.png",
-        mail = "test@test.tu",
-        name = "ELSU",
+        icon = "elsu",
+        mail = "main@elsu.ru",
+        name = "Федеральное государственное бюджетное образовательное учреждение высшего образования «Елецкий государственный университет им. И.А. Бунина»",
         phone = "+79554789776",
         timeZone = "+3",
-        skype = "Bayan",
+        skype = "elsu",
+        assistant = "TESTER"
+    )
+
+    private val memberAGTU = Member(
+        id = "elsu123",
+        icon = "agtu",
+        mail = "main@agtu.ru",
+        name = "Федеральное государственное бюджетное образовательное учреждение высшего образования «Астраханский государственный технический университет»",
+        phone = "+79554789776",
+        timeZone = "+3",
+        skype = "elsu",
+        assistant = "TESTER"
+    )
+
+    private val memberMGU = Member(
+        id = "elsu123",
+        icon = "msuo",
+        mail = "main@mguo.ru",
+        name = "Национальный исследовательский Мордовский государственный университет имени Н. П. Огарёва",
+        phone = "+79554789776",
+        timeZone = "+3",
+        skype = "elsu",
         assistant = "TESTER"
     )
 
@@ -31,7 +55,7 @@ class FakeRepository {
             status = 1,
             title = "Событие началось",
             lifecycle = arrayOf(0),
-            members = arrayOf(memberElsu)
+            members = arrayOf(memberEGU)
         )
 
         val status2 = Event(
@@ -47,7 +71,7 @@ class FakeRepository {
             status = 2,
             title = "Событие Запланированно",
             lifecycle = arrayOf(0),
-            members = arrayOf(memberElsu)
+            members = arrayOf(memberEGU)
         )
 
 
@@ -64,7 +88,7 @@ class FakeRepository {
             status = 3,
             title = "Событие Перенесено",
             lifecycle = arrayOf(0),
-            members = arrayOf(memberElsu)
+            members = arrayOf(memberEGU)
         )
 
 
@@ -81,7 +105,7 @@ class FakeRepository {
             status = 4,
             title = "Событие Отменено",
             lifecycle = arrayOf(0),
-            members = arrayOf(memberElsu)
+            members = arrayOf(memberEGU)
         )
 
 
@@ -98,7 +122,7 @@ class FakeRepository {
             status = 5,
             title = "Событие Завершено",
             lifecycle = arrayOf(0),
-            members = arrayOf(memberElsu)
+            members = arrayOf(memberEGU)
         )
 
 
@@ -106,4 +130,5 @@ class FakeRepository {
         return arrayListOf(status1, status2, status3, status4, status5)
     }
 
+    fun getMembers(): List<Member> = arrayListOf(memberEGU, memberAGTU, memberMGU)
 }
