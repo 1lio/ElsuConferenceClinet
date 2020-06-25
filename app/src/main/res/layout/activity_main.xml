@@ -11,7 +11,7 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="@dimen/bottom_bar_height"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="@+id/coordinatorLayout"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,7 +27,8 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
-        <include layout="@layout/search"/>
+
+        <include layout="@layout/search" />
     </FrameLayout>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -41,21 +42,20 @@
             android:id="@+id/bottomAppBar"
             style="@style/BottomNavStyle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="@dimen/bottom_bar_height"
             android:layout_gravity="bottom"
             app:fabAlignmentMode="end"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
+        <ru.elsu.conference.ui.view.FabCheckView
             android:id="@+id/fab"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:contentDescription="@string/add_event"
             app:layout_anchor="@id/bottomAppBar"
-            app:srcCompat="@drawable/ic_add"
-            app:tint="@color/white" />
+            tools:srcCompat="@drawable/ic_add"
+            tools:tint="@color/white" />
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

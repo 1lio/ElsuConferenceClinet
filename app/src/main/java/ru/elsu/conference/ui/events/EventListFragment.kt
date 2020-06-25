@@ -13,7 +13,6 @@ import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fr_events.*
 import ru.elsu.conference.R
-import ru.elsu.conference.extensions.setDrawable
 
 class EventListFragment : Fragment() {
 
@@ -22,8 +21,6 @@ class EventListFragment : Fragment() {
     private lateinit var fab: FloatingActionButton
 
     private var isCheckedFab = false
-
-
 
     override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
         super.onCreateView(inflater, group, state)
@@ -49,20 +46,14 @@ class EventListFragment : Fragment() {
             // Перхожим на создание "События" и меняем вид FAB
             isCheckedFab = if (!isCheckedFab) {
                 navigation.navigate(R.id.action_events_to_eventFragment)
-                fab.setDrawable(R.drawable.ic_baseline_save_24)
                 true
-
             } else {
                 // При повторном нажатии сохраняем событие и возвращаемся назад
                 saveEvent()
                 navigation.navigate(R.id.events)
-                fab.setDrawable(R.drawable.ic_add) // Меняем иконку обратно
                 false
             }
         }
-
-
-
     }
 
     private fun setCategories() {

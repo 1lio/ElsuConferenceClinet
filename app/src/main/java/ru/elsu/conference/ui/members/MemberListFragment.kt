@@ -49,13 +49,11 @@ class MemberListFragment : Fragment() {
             // Перхожим на создание "События" и меняем вид FAB
             isCheckedFab = if (!isCheckedFab) {
                 navigation.navigate(R.id.action_members_to_memberFragment)
-                fab.setDrawable(R.drawable.ic_baseline_save_24)
                 true
             } else {
                 // При повторном нажатии сохраняем событие и возвращаемся назад
                 saveMember()
                 navigation.navigate(R.id.members)
-                fab.setDrawable(R.drawable.ic_add) // Меняем иконку обратно
                 false
             }
 

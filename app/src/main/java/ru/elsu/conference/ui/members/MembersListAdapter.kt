@@ -28,10 +28,9 @@ class MembersListAdapter(private val list: List<Member>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(position)
+
         holder.itemView.setOnClickListener {
-
             it.findNavController().navigate(R.id.action_members_to_memberFragment)
-
         }
     }
 
@@ -52,8 +51,6 @@ class MembersListAdapter(private val list: List<Member>) :
                 "msuo" -> R.drawable.msuo
                 else -> R.drawable.ic_member
             }
-
-
 
             icon.setImageDrawable(ContextCompat.getDrawable(ctx, image))
         }
