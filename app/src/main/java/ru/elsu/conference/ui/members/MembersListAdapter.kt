@@ -53,6 +53,8 @@ class MembersListAdapter(private val list: List<Member>) :
                 else -> R.drawable.ic_member
             }
 
+
+
             icon.setImageDrawable(ContextCompat.getDrawable(ctx, image))
         }
 
