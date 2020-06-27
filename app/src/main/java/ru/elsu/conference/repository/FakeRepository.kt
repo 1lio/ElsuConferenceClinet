@@ -19,7 +19,7 @@ class FakeRepository {
     )
 
     private val memberAGTU = Member(
-        id = "elsu123",
+        id = "agt123",
         icon = "agtu",
         mail = "main@agtu.ru",
         name = "Федеральное государственное бюджетное образовательное учреждение высшего образования «Астраханский государственный технический университет»",
@@ -30,7 +30,7 @@ class FakeRepository {
     )
 
     private val memberMGU = Member(
-        id = "elsu123",
+        id = "emhu123",
         icon = "msuo",
         mail = "main@mguo.ru",
         name = "Национальный исследовательский Мордовский государственный университет имени Н. П. Огарёва",
