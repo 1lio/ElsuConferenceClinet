@@ -19,7 +19,6 @@ class FabCheckView : FloatingActionButton {
 
     private val viewModel: FabCheckViewModel
 
-
     init {
 
         setColorFilter(ContextCompat.getColor(context, R.color.white), PorterDuff.Mode.SRC_ATOP)
