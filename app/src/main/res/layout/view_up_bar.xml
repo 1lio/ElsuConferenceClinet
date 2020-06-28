@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/up_bar_height"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/spacing_normal"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        tools:text="Title" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end|center"
+        android:background="@drawable/bg_search"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/searchView"
+            android:layout_width="@dimen/icon_menu"
+            android:layout_height="@dimen/icon_menu"
+            android:layout_marginStart="@dimen/spacing_large"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            app:srcCompat="@drawable/ic_baseline_search_24" />
+
+        <EditText
+            android:id="@+id/searchText"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="@dimen/spacing_small"
+            android:autofillHints="no"
+            android:backgroundTint="@color/white"
+            android:gravity="center|start"
+            android:hint="@string/search"
+            android:inputType="textNoSuggestions"
+            android:textColor="@color/white"
+            android:textColorHint="@color/grayLight"
+            android:textSize="12sp"
+            android:visibility="gone"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/sortView"
+            android:layout_width="@dimen/icon_menu"
+            android:layout_height="@dimen/icon_menu"
+            android:layout_marginEnd="@dimen/spacing_normal"
+            app:srcCompat="@drawable/ic_baseline_sort_24" />
+    </LinearLayout>
+</LinearLayout>
