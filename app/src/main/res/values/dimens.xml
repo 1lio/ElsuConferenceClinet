@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-
+    <dimen name="up_bar_height">48dp</dimen>
     <dimen name="bottom_bar_height">56dp</dimen>
-
+    <dimen name="spacing_small">8dp</dimen>
+    <dimen name="spacing_normal">16dp</dimen>
+    <dimen name="spacing_large">32dp</dimen>
+    <dimen name="icon_menu">24dp</dimen>
 </resources>
