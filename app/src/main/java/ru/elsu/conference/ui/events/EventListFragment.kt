@@ -9,7 +9,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fr_events.*
 import ru.elsu.conference.R
@@ -25,13 +24,13 @@ class EventListFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
         super.onCreateView(inflater, group, state)
 
-        val sort = requireActivity().findViewById<View>(R.id.sortView)
+/*        val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.VISIBLE
-        sort.setOnClickListener { alertCategory() }
+        sort.setOnClickListener { alertCategory() }*/
 
-        navigation = requireActivity().findNavController(R.id.hostFragment)
+     /*   navigation = requireActivity().findNavController(R.id.hostFragment)
         fab = requireActivity().findViewById(R.id.fab)
-        fab.show()
+        fab.show()*/
 
         return inflater.inflate(R.layout.fr_events, group, false)
     }
@@ -41,7 +40,7 @@ class EventListFragment : Fragment() {
 
         setCategories()
 
-        fab.setOnClickListener {
+   /*     fab.setOnClickListener {
 
             // Перхожим на создание "События" и меняем вид FAB
             isCheckedFab = if (!isCheckedFab) {
@@ -53,7 +52,7 @@ class EventListFragment : Fragment() {
                 navigation.navigate(R.id.events)
                 false
             }
-        }
+        }*/
     }
 
     private fun setCategories() {

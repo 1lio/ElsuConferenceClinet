@@ -1,29 +1,19 @@
 package ru.elsu.conference.ui.statistics
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ru.elsu.conference.R
 
-class StatisticsFragment : Fragment() {
+class StatisticsFragment : Fragment(R.layout.fr_statistics) {
 
-    override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
-        super.onCreateView(inflater, group, state)
-
-        val sort = requireActivity().findViewById<View>(R.id.sortView)
-        sort.visibility = View.GONE
-
-        val fab = requireActivity().findViewById<FloatingActionButton>(R.id.fab)
-        fab.hide()
-
-        return inflater.inflate(R.layout.fr_statistics, group, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+     /*   val sort = requireActivity().findViewById<View>(R.id.sortView)
+        sort.visibility = View.GONE*/
+
 
         /*
 

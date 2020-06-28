@@ -7,16 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import ru.elsu.conference.R
 
-class EventFragment : Fragment() {
+class EventFragment : Fragment(R.layout.fr_event_full) {
 
-    override fun onCreateView(inflater: LayoutInflater, group: ViewGroup?, state: Bundle?): View? {
-        super.onCreateView(inflater, group, state)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.GONE
 
-        return inflater.inflate(R.layout.fr_event_full, group, false)
     }
-
-
 }
