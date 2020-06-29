@@ -7,11 +7,9 @@ import ru.elsu.conference.R
 
 class EventFragment : Fragment(R.layout.fr_event_detail) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
         val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.GONE
-
     }
 }

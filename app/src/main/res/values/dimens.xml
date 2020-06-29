@@ -10,6 +10,7 @@
 
     <dimen name="icon_menu">24dp</dimen>
     <dimen name="icon_member">48dp</dimen>
+    <dimen name="icon_normal">36dp</dimen>
 
 
     <dimen name="subtext">12sp</dimen>

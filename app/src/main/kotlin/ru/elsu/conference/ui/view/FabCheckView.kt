@@ -6,6 +6,7 @@ import android.util.AttributeSet
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ru.elsu.conference.MainActivity
 import ru.elsu.conference.R
@@ -15,9 +16,14 @@ class FabCheckView : FloatingActionButton {
 
     constructor(context: Context) : super(context)
     constructor(context: Context, attr: AttributeSet) : super(context, attr)
-    constructor(context: Context, attr: AttributeSet, defStyleAttr: Int) : super(context, attr, defStyleAttr)
+    constructor(context: Context, attr: AttributeSet, defStyleAttr: Int) : super(
+        context,
+        attr,
+        defStyleAttr
+    )
 
     private val viewModel: FabCheckViewModel
+    private var isCheckedFab = false
 
     init {
 
@@ -44,6 +50,20 @@ class FabCheckView : FloatingActionButton {
 
         })
 
+        this.setOnClickListener {
+
+            val navigation = activity.findNavController(R.id.hostFragment)
+
+            // Перхожим на создание "События" и меняем вид FAB
+            isCheckedFab = if (!isCheckedFab) {
+                navigation.navigate(R.id.action_events_to_eventFragment)
+                true
+            } else {
+                // При повторном нажатии сохраняем событие и возвращаемся назад
+                navigation.navigate(R.id.events)
+                false
+            }
+        }
 
 //        val navController = activity.findNavController(R.id.hostFragment)
 /*
