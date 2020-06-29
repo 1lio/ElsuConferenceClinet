@@ -9,9 +9,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fr_members.*
+import kotlinx.android.synthetic.main.fr_member_list.*
 import ru.elsu.conference.R
-import ru.elsu.conference.extensions.setDrawable
 import ru.elsu.conference.repository.Repository
 
 class MemberListFragment : Fragment() {
@@ -35,7 +34,7 @@ class MemberListFragment : Fragment() {
         val sort = requireActivity().findViewById<View>(R.id.sortView)
         sort.visibility = View.GONE
 
-        return inflater.inflate(R.layout.fr_members, group, false)
+        return inflater.inflate(R.layout.fr_member_list, group, false)
     }
 
 

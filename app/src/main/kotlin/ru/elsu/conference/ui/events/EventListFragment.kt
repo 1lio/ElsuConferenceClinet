@@ -10,7 +10,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.NavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.fr_events.*
+import kotlinx.android.synthetic.main.fr_event_list.*
 import ru.elsu.conference.R
 
 class EventListFragment : Fragment() {
@@ -32,7 +32,7 @@ class EventListFragment : Fragment() {
         fab = requireActivity().findViewById(R.id.fab)
         fab.show()*/
 
-        return inflater.inflate(R.layout.fr_events, group, false)
+        return inflater.inflate(R.layout.fr_event_list, group, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
