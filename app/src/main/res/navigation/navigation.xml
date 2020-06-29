@@ -37,5 +37,5 @@
         android:id="@+id/memberFragment"
         android:name="ru.elsu.conference.ui.members.MemberFragment"
         android:label="MemberFragment"
-        tools:layout="@layout/fr_member" />
+        tools:layout="@layout/fr_member_detail" />
 </navigation>
