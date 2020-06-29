@@ -20,4 +20,15 @@
         <item name="android:layout_gravity">bottom</item>
     </style>
 
+
+    <style name="TitleText">
+        <item name="android:textSize">@dimen/subtext</item>
+        <item name="android:textColor">@color/grayDark</item>
+    </style>
+
+    <style name="SubTitleText">
+        <item name="android:textSize">@dimen/subtext</item>
+        <item name="android:textColor">@color/grayLight</item>
+    </style>
+
 </resources>
