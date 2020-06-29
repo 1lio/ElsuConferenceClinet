@@ -12,6 +12,8 @@
         android:layout_marginStart="16dp"
         android:enabled="false"
         android:hint="@string/manager"
+        android:importantForAutofill="no"
+        android:inputType="textEmailAddress"
         android:paddingStart="4dp"
         android:paddingEnd="16dp"
         android:textColor="#000"
@@ -32,6 +34,8 @@
         android:layout_marginTop="16dp"
         android:enabled="false"
         android:hint="@string/fio"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:paddingStart="4dp"
         android:paddingEnd="16dp"
         android:textColor="#000"
@@ -48,6 +52,8 @@
         android:layout_marginStart="16dp"
         android:enabled="false"
         android:hint="@string/skype"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:paddingStart="4dp"
         android:paddingEnd="16dp"
         android:textColor="#000"
@@ -67,6 +73,8 @@
         android:layout_marginStart="16dp"
         android:enabled="false"
         android:hint="@string/phone"
+        android:importantForAutofill="no"
+        android:inputType="phone"
         android:paddingStart="4dp"
         android:paddingEnd="16dp"
         android:textColor="#000"
@@ -79,19 +87,6 @@
         app:layout_constraintVertical_bias="0.0"
         tools:text="+7777777777" />
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="16dp"
-        android:paddingTop="16dp"
-        android:paddingEnd="16dp"
-        android:paddingBottom="8dp"
-        android:text="@string/card_member"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/iconMember"
@@ -99,10 +94,9 @@
         android:layout_height="48dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/ic_member_gray"
         tools:ignore="ContentDescription" />
@@ -112,20 +106,21 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:enabled="false"
-        android:hint="@string/name_p"
-        android:paddingStart="4dp"
-        android:paddingEnd="16dp"
-        android:textColor="#000"
+        android:layout_marginEnd="16dp"
+        android:hint="@string/name_event"
+        android:importantForAutofill="no"
+        android:inputType="text|textMultiLine|textCapSentences"
+        android:maxLines="3"
+        android:selectAllOnFocus="false"
+        android:singleLine="false"
+        android:textAlignment="textStart"
+        android:textColor="@color/grayDark"
         android:textSize="14sp"
         app:layout_constraintBottom_toTopOf="@+id/divider6"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/iconMember"
-
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:text="Федеральное государственное бюджетное образовательное учреждение высшего образования «Елецкий государственный университет им. И.А. Бунина»" />
 
     <View
@@ -154,7 +149,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:text="@string/assistant"
-        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider5" />
 
@@ -164,13 +159,15 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:ems="3"
+        android:importantForAutofill="no"
         android:inputType="date"
         android:text="@string/def_utc"
         android:textAlignment="center"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="@+id/textView11"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView10" />
+        app:layout_constraintTop_toTopOf="@+id/textView10"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/textView11"
@@ -200,7 +197,8 @@
         android:tint="@color/grayLight"
         app:layout_constraintStart_toStartOf="@+id/titleMember2"
         app:layout_constraintTop_toBottomOf="@+id/titleMember2"
-        app:srcCompat="@drawable/ic_skype" />
+        app:srcCompat="@drawable/ic_skype"
+        tools:ignore="ContentDescription" />
 
     <View
         android:id="@+id/divider6"
@@ -221,7 +219,8 @@
         android:tint="@color/grayLight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleMember3"
-        app:srcCompat="@drawable/ic_phone" />
+        app:srcCompat="@drawable/ic_phone"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView6"
@@ -232,7 +231,8 @@
         android:tint="@color/grayLight"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:srcCompat="@drawable/ic_mail" />
+        app:srcCompat="@drawable/ic_mail"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView13"
@@ -241,7 +241,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        android:text="Контактные данные ответственного за техническое обеспечение мероприятия"
+        android:text="@string/about_us"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView12" />
