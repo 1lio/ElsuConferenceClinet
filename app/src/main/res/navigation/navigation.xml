@@ -9,7 +9,7 @@
         android:id="@+id/events"
         android:name="ru.elsu.conference.ui.events.EventListFragment"
         android:label="EventsFragment"
-        tools:layout="@layout/fr_events">
+        tools:layout="@layout/fr_event_list">
         <action
             android:id="@+id/action_events_to_eventFragment"
             app:destination="@id/eventFragment" />
@@ -18,7 +18,7 @@
         android:id="@+id/members"
         android:name="ru.elsu.conference.ui.members.MemberListFragment"
         android:label="MembersFragment"
-        tools:layout="@layout/fr_members">
+        tools:layout="@layout/fr_member_list">
         <action
             android:id="@+id/action_members_to_memberFragment"
             app:destination="@id/memberFragment" />
@@ -32,7 +32,7 @@
         android:id="@+id/eventFragment"
         android:name="ru.elsu.conference.ui.events.EventFragment"
         android:label="EventFragment"
-        tools:layout="@layout/fr_event_full" />
+        tools:layout="@layout/fr_event_detail" />
     <fragment
         android:id="@+id/memberFragment"
         android:name="ru.elsu.conference.ui.members.MemberFragment"
