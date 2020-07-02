@@ -12,15 +12,11 @@ import ru.elsu.conference.MainActivity
 import ru.elsu.conference.R
 import ru.elsu.conference.extensions.setDrawable
 
-class FabCheckView : FloatingActionButton {
-
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attr: AttributeSet) : super(context, attr)
-    constructor(context: Context, attr: AttributeSet, defStyleAttr: Int) : super(
-        context,
-        attr,
-        defStyleAttr
-    )
+class FabCheckView @JvmOverloads constructor(
+    context: Context,
+    attr: AttributeSet? = null,
+    defStyle: Int = 0
+) : FloatingActionButton(context, attr, defStyle) {
 
     private val viewModel: FabCheckViewModel
     private var isCheckedFab = false
