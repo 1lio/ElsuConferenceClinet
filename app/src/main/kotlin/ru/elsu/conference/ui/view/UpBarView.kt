@@ -8,10 +8,11 @@ import kotlinx.android.synthetic.main.view_up_bar.view.*
 import ru.elsu.conference.R
 import java.util.*
 
-class UpBarView : LinearLayout {
-
-    constructor(context: Context) : super(context)
-    constructor(context: Context, attr: AttributeSet) : super(context, attr)
+class UpBarView @JvmOverloads constructor(
+    context: Context,
+    attr: AttributeSet? = null,
+    defStyle: Int = 0
+) : LinearLayout(context, attr, defStyle) {
 
     init {
         LayoutInflater.from(context).inflate(R.layout.view_up_bar, this)
