@@ -14,7 +14,7 @@ import ru.elsu.conference.R
 import ru.elsu.conference.repository.Repository
 
 class MemberListFragment : Fragment() {
-// fix
+    // fix
     private lateinit var navigation: NavController
     private lateinit var fab: FloatingActionButton
     private lateinit var adapter: MembersListAdapter
