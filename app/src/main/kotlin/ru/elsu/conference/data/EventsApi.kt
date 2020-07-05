@@ -2,6 +2,7 @@ package ru.elsu.conference.data
 
 import retrofit2.Call
 import retrofit2.http.*
+import ru.elsu.conference.domain.model.Event
 
 interface EventsApi {
 

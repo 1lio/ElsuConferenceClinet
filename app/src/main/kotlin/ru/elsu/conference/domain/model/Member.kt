@@ -1,4 +1,4 @@
-package ru.elsu.conference.data
+package ru.elsu.conference.domain.model
 
 data class Member(
     val id: String,

@@ -1,5 +1,8 @@
 package ru.elsu.conference.data
 
+import ru.elsu.conference.domain.model.Event
+import ru.elsu.conference.domain.model.Member
+
 // Для ручного тестирования
 
 class FakeRepository {

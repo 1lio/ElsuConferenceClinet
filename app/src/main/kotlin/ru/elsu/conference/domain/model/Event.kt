@@ -1,6 +1,4 @@
-package ru.elsu.conference.data
-
-import ru.elsu.conference.data.Member
+package ru.elsu.conference.domain.model
 
 data class Event(
 
