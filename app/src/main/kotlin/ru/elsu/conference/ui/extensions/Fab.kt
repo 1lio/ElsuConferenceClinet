@@ -1,4 +1,4 @@
-package ru.elsu.conference.extensions
+package ru.elsu.conference.ui.extensions
 
 import androidx.core.content.ContextCompat
 import com.google.android.material.floatingactionbutton.FloatingActionButton

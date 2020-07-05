@@ -11,7 +11,7 @@ import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fr_member_list.*
 import ru.elsu.conference.R
-import ru.elsu.conference.repository.Repository
+import ru.elsu.conference.data.Repository
 
 class MemberListFragment : Fragment() {
     // fix

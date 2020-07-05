@@ -1,7 +1,4 @@
-package ru.elsu.conference.repository
-
-import ru.elsu.conference.api.model.Event
-import ru.elsu.conference.api.model.Member
+package ru.elsu.conference.data
 
 // Для ручного тестирования
 

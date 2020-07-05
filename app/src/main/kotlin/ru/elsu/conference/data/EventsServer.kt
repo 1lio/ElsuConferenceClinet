@@ -1,4 +1,4 @@
-package ru.elsu.conference.api
+package ru.elsu.conference.data
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

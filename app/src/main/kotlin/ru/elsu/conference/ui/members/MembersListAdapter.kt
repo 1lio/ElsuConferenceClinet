@@ -10,7 +10,7 @@ import androidx.core.content.ContextCompat
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import ru.elsu.conference.R
-import ru.elsu.conference.api.model.Member
+import ru.elsu.conference.data.Member
 
 class MembersListAdapter(private val list: List<Member>) :
     RecyclerView.Adapter<MembersListAdapter.ViewHolder>() {

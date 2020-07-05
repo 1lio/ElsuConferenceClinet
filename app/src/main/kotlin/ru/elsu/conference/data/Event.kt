@@ -1,4 +1,6 @@
-package ru.elsu.conference.api.model
+package ru.elsu.conference.data
+
+import ru.elsu.conference.data.Member
 
 data class Event(
 

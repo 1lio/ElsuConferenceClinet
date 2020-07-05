@@ -9,8 +9,8 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import ru.elsu.conference.R
-import ru.elsu.conference.extensions.setDrawable
 import ru.elsu.conference.ui.MainActivity
+import ru.elsu.conference.ui.extensions.setDrawable
 
 class FabCheckView @JvmOverloads constructor(
     context: Context,
