@@ -16,13 +16,8 @@ class UpBarView @JvmOverloads constructor(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.view_up_bar, this)
-        "СОБЫТИЕ".setTitleText()
-    }
-
-    private fun String.setTitleText() {
-        toUpperCase(Locale.ROOT)
-        title.text = this
 
     }
+
 
 }

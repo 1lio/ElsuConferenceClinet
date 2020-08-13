@@ -9,11 +9,12 @@
     <TextView
         android:id="@+id/title"
         android:layout_width="0dp"
-        android:textSize="18sp"
         android:layout_height="match_parent"
         android:layout_marginStart="@dimen/spacing_normal"
         android:layout_weight="1"
         android:gravity="center_vertical"
+        android:textAllCaps="true"
+        android:textSize="18sp"
         tools:text="Title" />
 
     <LinearLayout
@@ -34,7 +35,7 @@
 
         <EditText
             android:id="@+id/searchText"
-            android:layout_width="120dp"
+            android:layout_width="@dimen/search_size"
             android:layout_height="match_parent"
             android:layout_marginEnd="@dimen/spacing_small"
             android:autofillHints="no"
@@ -44,9 +45,10 @@
             android:inputType="textNoSuggestions"
             android:textColor="@color/white"
             android:textColorHint="@color/grayLight"
-            android:textSize="12sp"
+            android:textSize="@dimen/text_search_size"
             android:visibility="gone"
-            tools:ignore="RtlSymmetry" />
+            tools:ignore="RtlSymmetry"
+            tools:visibility="visible" />
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/sortView"
