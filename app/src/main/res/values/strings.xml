@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ЕГУ: Конференции</string>
+    <string name="app_name">Оценка конференций</string>
     <string name="events">События</string>
     <string name="members">Участники</string>
     <string name="add_event">Создать событие</string>
