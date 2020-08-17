@@ -32,4 +32,19 @@ class UpBarView @JvmOverloads constructor(
         }
         get() = sortView.isVisible
 
+
+    var isVisibleSearch
+        set(visible) {
+            sortView.visibility = if (visible) View.VISIBLE else View.GONE
+        }
+        get() = sortView.isVisible
+
+
+    // Show Search animation
+    fun showSearch() {
+
+    }
+
+    // Found elements
+    fun addSearchRequestView(list: List<View>) {}
 }
