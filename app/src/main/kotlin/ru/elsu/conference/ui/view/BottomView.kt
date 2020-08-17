@@ -14,7 +14,6 @@ class BottomView @JvmOverloads constructor(
 ) : BottomAppBar(context, attr, defStyle) {
 
     init {
-
         val activity = context as MainActivity
         val navigation = activity.findNavController(R.id.hostFragment)
 
@@ -26,6 +25,20 @@ class BottomView @JvmOverloads constructor(
                 R.id.statistics -> navigation.navigate(R.id.statistics)
             }
             true
+        }
+
+        val upBarView = activity.findViewById<UpBarView>(R.id.upBarView)
+
+        navigation.addOnDestinationChangedListener { _, destination, _ ->
+
+            val statisticsLabel = resources.getString(R.string.statistics)
+            val fab = activity.findViewById<FabCheckView>(R.id.fab)
+
+            if (destination.label.toString() == statisticsLabel) {
+                fab.hide()
+            }
+
+            upBarView.title = destination.label.toString()
         }
     }
 }
