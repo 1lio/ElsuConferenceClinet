@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.widget.LinearLayout
 import kotlinx.android.synthetic.main.view_up_bar.view.*
 import ru.elsu.conference.R
-import java.util.*
 
 class UpBarView @JvmOverloads constructor(
     context: Context,
@@ -16,8 +15,10 @@ class UpBarView @JvmOverloads constructor(
 
     init {
         LayoutInflater.from(context).inflate(R.layout.view_up_bar, this)
-
     }
 
+    fun setTitle(title: String) {
+        this.title.text = title
+    }
 
 }
