@@ -4,11 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/navigation"
     app:startDestination="@id/events">
-
     <fragment
         android:id="@+id/events"
         android:name="ru.elsu.conference.ui.events.EventListFragment"
-        android:label="EventsFragment"
+        android:label="@string/events"
         tools:layout="@layout/fr_event_list">
         <action
             android:id="@+id/action_events_to_eventFragment"
@@ -17,7 +16,7 @@
     <fragment
         android:id="@+id/members"
         android:name="ru.elsu.conference.ui.members.MemberListFragment"
-        android:label="MembersFragment"
+        android:label="@string/members"
         tools:layout="@layout/fr_member_list">
         <action
             android:id="@+id/action_members_to_memberFragment"
@@ -26,16 +25,16 @@
     <fragment
         android:id="@+id/statistics"
         android:name="ru.elsu.conference.ui.statistics.StatisticsFragment"
-        android:label="StatisticsFragment"
+        android:label="@string/statistics"
         tools:layout="@layout/fr_statistics" />
     <fragment
         android:id="@+id/eventFragment"
         android:name="ru.elsu.conference.ui.events.EventFragment"
-        android:label="EventFragment"
+        android:label="@string/event"
         tools:layout="@layout/fr_event_detail" />
     <fragment
         android:id="@+id/memberFragment"
         android:name="ru.elsu.conference.ui.members.MemberFragment"
-        android:label="MemberFragment"
+        android:label="@string/member"
         tools:layout="@layout/fr_member_detail" />
 </navigation>

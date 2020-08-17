@@ -1,7 +1,9 @@
 <resources>
     <string name="app_name">Оценка конференций</string>
+    <string name="event">Событие</string>
     <string name="events">События</string>
     <string name="members">Участники</string>
+    <string name="member">Участник</string>
     <string name="add_event">Создать событие</string>
     <string name="name_event">Название конференции</string>
     <string name="status">Статус</string>
