@@ -6,8 +6,6 @@ import ru.elsu.conference.domain.model.Event
 
 interface EventsApi {
 
-    // CRUD
-
     @POST
     fun createEvents()
 
