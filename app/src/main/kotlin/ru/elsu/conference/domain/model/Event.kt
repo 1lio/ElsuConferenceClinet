@@ -39,8 +39,7 @@ data class Event(
         (parcel.readArray(ClassLoader.getSystemClassLoader()) as Array<Int>?)!!,
         parcel.readString()!!,
         parcel.readInt()
-    ) {
-    }
+    )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
         parcel.writeString(id)
@@ -58,14 +57,51 @@ data class Event(
 
     override fun describeContents(): Int = 0
 
+    override fun equals(other: Any?): Boolean {
+        if (this === other) return true
+        if (javaClass != other?.javaClass) return false
+
+        other as Event
+
+        if (id != other.id) return false
+        if (title != other.title) return false
+        if (icon != other.icon) return false
+        if (status != other.status) return false
+        if (time != other.time) return false
+        if (date != other.date) return false
+        if (platform != other.platform) return false
+        if (!members.contentEquals(other.members)) return false
+        if (institute != other.institute) return false
+        if (description != other.description) return false
+        if (!lifecycle.contentEquals(other.lifecycle)) return false
+        if (duration != other.duration) return false
+        if (stars != other.stars) return false
+
+        return true
+    }
+
+    override fun hashCode(): Int {
+        var result = id.hashCode()
+        result = 31 * result + title.hashCode()
+        result = 31 * result + icon.hashCode()
+        result = 31 * result + status
+        result = 31 * result + time.hashCode()
+        result = 31 * result + date.hashCode()
+        result = 31 * result + platform.hashCode()
+        result = 31 * result + members.contentHashCode()
+        result = 31 * result + institute.hashCode()
+        result = 31 * result + description.hashCode()
+        result = 31 * result + lifecycle.contentHashCode()
+        result = 31 * result + duration.hashCode()
+        result = 31 * result + stars
+        return result
+    }
+
     companion object CREATOR : Parcelable.Creator<Event> {
 
-        override fun createFromParcel(parcel: Parcel): Event {
-            return Event(parcel)
-        }
+        override fun createFromParcel(parcel: Parcel): Event = Event(parcel)
 
-        override fun newArray(size: Int): Array<Event?> {
-            return arrayOfNulls(size)
-        }
+        override fun newArray(size: Int): Array<Event?> = arrayOfNulls(size)
+
     }
 }
